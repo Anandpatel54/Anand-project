@@ -133,7 +133,24 @@ function typedAnimation() {
   });
 }
 
+const form = document.querySelector("form");
+function sendMail() {
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "examplePoject323@gmail.com",
+    Password: "3DF0FF70CC67214D8AB1C166BB835CB5837B",
+    To: "examplePoject323@gmail.com",
+    From: "examplePoject323@gmail.com",
+    Subject: "This is the subject",
+    Body: "And this is the body",
+  }).then((message) => alert(message));
+}
+
+form.addEventListener(".submit-btn",(e)=>{
+  e.preventDefault()
+  sendMail()
+})
+
 makeDesign();
 makeLoader();
 typedAnimation();
-
