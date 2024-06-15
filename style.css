@@ -1148,7 +1148,7 @@ textarea:focus {
 }
 
 .social-btn:hover {
-  width: 150px;
+  scale: 1;
   border-radius: 5px;
 }
 
